@@ -1,95 +1,84 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
+import bigcoffee from "@/app/assets/bigcoffee.png";
+import smallcoffee from "@/app/assets/smallcoffee.png";
+import img1 from "@/app/assets/img1.png";
+import img2 from "@/app/assets/img2.png";
+import img3 from "@/app/assets/img3.png";
+import img4 from "@/app/assets/img4.png";
+import img5 from "@/app/assets/img5.png";
+import coffee_icon from "@/app/assets/favicon.png";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main className={styles.page}>
+      <div className={styles.container_principal}>
+        <div className={styles.container_textual}>
+          <h1>
+            Your coffee <br />
+            Your vibe <br />
+            Your energy <br />
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in
+            libero risus semper habitant arcu eget. Et integer facilisi eget.
+          </p>
+          <Link className={styles.btn} href="/">
+            <p>Explore</p>
+          </Link>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className={styles.container_img}>
+          <Image className={styles.bigcoffee} src={bigcoffee}></Image>
+          <Image className={styles.smallcoffee} src={smallcoffee}></Image>
+        </div>
+      </div>
+      <div className={styles.container_referencia}>
+        <div className={styles.container_dark}>
+          <div>
+            <Image className={styles.img1} src={img1}></Image>
+            <p>Et integer facilisi eget</p>
+          </div>
+          <div>
+            <Image className={styles.img2} src={img2}></Image>
+            <p>Et integer facilisi eget</p>
+          </div>
+          <div>
+            <Image className={styles.img3} src={img3}></Image>
+            <p>Et integer facilisi eget</p>
+          </div>
+          <div>
+            <Image className={styles.img4} src={img4}></Image>
+            <p>Et integer facilisi eget</p>
+          </div>
+          <div>
+            <Image className={styles.img5} src={img5}></Image>
+            <p>Et integer facilisi eget</p>
+          </div>
+        </div>
+        <div className={styles.container_flutuante}>
+          <div className={styles.metricas}>
+            <div>
+              <Image className={styles.coffee_icon} src={coffee_icon}></Image>
+              <h2>190+</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+            <div>
+              <Image className={styles.coffee_icon} src={coffee_icon}></Image>
+              <h2>123K</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+            <div>
+              <Image className={styles.coffee_icon} src={coffee_icon}></Image>
+              <h2>58</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>Desenvolvido por <span>Victoria Vivian</span></p>
       </footer>
-    </div>
+    </main>
   );
 }
